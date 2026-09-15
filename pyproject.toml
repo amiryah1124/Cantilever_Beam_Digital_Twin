@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cantilever-beam-digital-twin"
+version = "0.1.0"
+description = "Physics-based cantilever beam digital twin with sensing, validation, and real-time visualization."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Amir Abbas Yahyaeian"}]
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.0",
+    "pyyaml>=6.0",
+    "pyserial>=3.5",
+    "pyvista>=0.44",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "jupyter>=1.0", "matplotlib>=3.8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
