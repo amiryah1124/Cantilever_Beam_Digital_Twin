@@ -1,0 +1,30 @@
+beam:
+  length_m: 0.300
+  width_m: 0.025
+  thickness_m: 0.003
+  material: aluminum_6061_t6
+
+material:
+  youngs_modulus_pa: 6.89e10
+  poisson_ratio: 0.33
+  density_kg_m3: 2700.0
+
+loading:
+  reference_load_n: 1.0
+  load_position_m: 0.300
+  direction: negative_y
+
+acquisition:
+  mode: simulated
+  serial_port: COM3
+  baud_rate: 115200
+  sample_rate_hz: 20
+
+visualization:
+  deformation_scale: 1.0
+  scalar_field: stress
+  update_rate_hz: 10
+
+validation:
+  maximum_expected_load_n: 20.0
+  linear_regime_required: true
